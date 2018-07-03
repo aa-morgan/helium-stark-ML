@@ -133,7 +133,7 @@ def wf_overlap(r1, y1, r2, y2, p=1.0):
     return np.sum(y1 * y2 * r1**(2.0 + p))
 
 @jit(cache=True)
-def rad_overlap(n1, l1, n2, l2, p=1.0):
+def radial_overlap(n1, l1, n2, l2, p=1.0):
     """ Radial overlap for state n1, l1 and n2 l2.
     """
     nmax = max(n1, n2)

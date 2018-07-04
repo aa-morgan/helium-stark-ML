@@ -3,6 +3,7 @@ import numpy as np
 import os.path
 from tqdm import trange
 from sympy.physics.wigner import clebsch_gordan, wigner_3j, wigner_6j
+import time
 
 class interaction_matrix:
     """
@@ -21,8 +22,8 @@ class interaction_matrix:
         cache = kwargs.get('cache_matrices', True)
         if self.matrix is None or cache is False:
             if kwargs.get('load_matrices', False) and \
-               check_matrix(self.type, self, **kwargs):
-                self.matrix = load_matrix(self.type, self, **kwargs)['matrix']
+               self.check_matrix(**kwargs):
+                self.matrix = self.load_matrix(**kwargs)['matrix']
             else:
                 self.matrix = np.zeros([self.num_states, self.num_states])
                 for i in trange(self.num_states, desc='Calculating '+self.type+' terms', **tqdm_kwargs):
@@ -32,7 +33,7 @@ class interaction_matrix:
                         # assume matrix is symmetric
                         self.matrix[j][i] = self.matrix[i][j]
                 if kwargs.get('save_matrices', False):
-                    save_matrix(self, **kwargs)  
+                    self.save_matrix(**kwargs)  
         else:
             print('Using cached '+self.type+' matrix')
             

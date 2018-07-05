@@ -1,6 +1,8 @@
 helium Stark ML
 ===============
 
+Deprecated in favour of: https://github.com/axm108/helium-stark-zeeman
+
 v0.0.1.dev.
 
 Calculate the Stark effect in Rydberg helium in the n,L,S,ML basis using the

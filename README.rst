@@ -1,7 +1,7 @@
+`Deprecated:` In favour of www.github.com/aa-morgan/helium-stark-zeeman
+
 helium Stark ML
 ===============
-
-Deprecated in favour of: https://github.com/aa-morgan/helium-stark-zeeman
 
 v0.0.1.dev.
 

@@ -1,7 +1,7 @@
 helium Stark ML
 ===============
 
-Deprecated in favour of: https://github.com/axm108/helium-stark-zeeman
+Deprecated in favour of: https://github.com/aa-morgan/helium-stark-zeeman
 
 v0.0.1.dev.
 
